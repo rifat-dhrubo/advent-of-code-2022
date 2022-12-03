@@ -1,4 +1,3 @@
-import {main} from './day1';
+import {secondDay} from './day2/index';
 
-const ans = main();
-console.log('🚀 ~ file: index.ts:4 ~ ans', ans);
+const secondDayResult = secondDay();
