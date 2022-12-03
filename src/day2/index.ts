@@ -47,16 +47,14 @@ export const secondDay = () => {
 	arrayData.forEach((pair) => {
 		let localResult = valueWinMatrix[pair.charAt(2)];
 
-		let potentialResults = [];
+		let potentialResult = 0;
 		for (const property in resultMatrix) {
-			if (resultMatrix[property] === localResult) {
-				potentialResults.push(property);
+			if (resultMatrix[property] === localResult && property.charAt(0) === pair.charAt(0)) {
+				potentialResult = valueMatrix[property.charAt(2)];
 			}
 		}
 
-		const tuple = potentialResults.filter((value) => value.charAt(0) === pair.charAt(0));
-
-		secondResult += localResult + valueMatrix[tuple[0].charAt(2)];
+		secondResult += localResult + potentialResult;
 	});
 
 	return {
