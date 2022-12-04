@@ -1,4 +1,3 @@
-import {secondDay} from './day2/index';
+import {solutionDay3} from './day3';
 
-const secondDayResult = secondDay();
-console.log('🚀 ~ file: index.ts:4 ~ secondDayResult', secondDayResult);
+solutionDay3();
